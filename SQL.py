@@ -57,7 +57,7 @@ try:
         def create_table(table_name, data):
             data_types = get_data_types(data.columns)
             create_table_query = f"""
-                                CREATE TABLE IF NOT EXISTS {table_name} (
+                                CREATE TABLE IF NOT EXISTS `{table_name}` (
                                     {', '.join([f'`{col}` {data_type}' for col, data_type in data_types.items()])}
                                 )
                             """.replace('\n', '')
@@ -65,7 +65,7 @@ try:
 
         def insert_data(table_name, data, cursor):
             insert_query = f"""
-                INSERT INTO {table_name} ({', '.join([f'`{col}`' for col in data.columns])})
+                INSERT INTO `{table_name}` ({', '.join([f'`{col}`' for col in data.columns])})
                 VALUES ({', '.join(['%s' for _ in data.columns])})
             """
 
