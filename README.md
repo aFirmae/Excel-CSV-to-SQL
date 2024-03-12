@@ -25,5 +25,5 @@ Upload any Excel (.xlsx or .xls) or CSV (.csv) into an SQL Server.
      ```
 6. xlrd (For .xls Files)
    ```
-     pip install xlrd
+   pip install xlrd
    ```
