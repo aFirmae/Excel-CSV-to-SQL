@@ -19,7 +19,11 @@ Upload any Excel (.xlsx or .xls) or CSV (.csv) into an SQL Server.
      ```
      pip install --upgrade mysql-connector-python
      ```
-5. openpyxl
+5. openpyxl (For .xlsx Files)
      ```
      pip install openpyxl
      ```
+6. xlrd (For .xls Files)
+   ```
+     pip install xlrd
+   ```
